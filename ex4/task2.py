@@ -35,6 +35,7 @@ if __name__ == "__main__":
     print("Sum of numbers:", stats.get_sum())
     print("Mean of numbers:", stats.average()) '''
     #Part 3 test prints:
+    '''
     stats = NumberStats()
     list_numbers = []
     print("Please type in interger numbers:")
@@ -45,4 +46,25 @@ if __name__ == "__main__":
     for i in list_numbers:
         stats.add_number(i)
     print("Sum of numbers:", stats.get_sum())
-    print("Mean of numbers:", stats.average())    
+    print("Mean of numbers:", stats.average())  '''
+    #Part 4 test prints:
+    '''
+    stats = NumberStats()
+    stats_odd = NumberStats()
+    stats_even = NumberStats()
+    list_numbers = []
+    print("Please type in interger numbers:")
+    a = int(input())
+    while a != -1:
+        list_numbers.append(int(a))
+        a = int(input())
+    for i in list_numbers:
+        stats.add_number(i)
+        if i % 2 == 0:
+            stats_even.add_number(i)
+        else:
+            stats_odd.add_number(i)
+    print("Sum of numbers:", stats.get_sum())
+    print("Mean of numbers:", stats.average()) 
+    print("Sum of even numbers:", stats_even.get_sum())
+    print("Sum of odd numbers:", stats_odd.get_sum())  '''
