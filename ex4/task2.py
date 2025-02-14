@@ -25,6 +25,7 @@ if __name__ == "__main__":
     stats.add_number(2)
     print("Numbers added:", stats.count_numbers()) '''
     #Part 2 test prints:
+    '''
     stats = NumberStats()
     stats.add_number(3)
     stats.add_number(5)
@@ -32,4 +33,16 @@ if __name__ == "__main__":
     stats.add_number(2)
     print("Numbers added:", stats.count_numbers())
     print("Sum of numbers:", stats.get_sum())
-    print("Mean of numbers:", stats.average()) 
+    print("Mean of numbers:", stats.average()) '''
+    #Part 3 test prints:
+    stats = NumberStats()
+    list_numbers = []
+    print("Please type in interger numbers:")
+    a = int(input())
+    while a != -1:
+        list_numbers.append(int(a))
+        a = int(input())
+    for i in list_numbers:
+        stats.add_number(i)
+    print("Sum of numbers:", stats.get_sum())
+    print("Mean of numbers:", stats.average())    
