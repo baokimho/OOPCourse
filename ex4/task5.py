@@ -154,4 +154,5 @@ if __name__ == "__main__":
     print("Funds available at the terminal:", exactum.funds)
     print("Regular lunches sold:", exactum.ordinaries)
     print("Special lunches sold:", exactum.luxuries) 
-'''
+    
+    '''
