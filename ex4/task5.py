@@ -78,7 +78,10 @@ class PaymentTerminal:
         return False  
     
     def deposit_money_on_card(self, card: LunchCard, amount: float):
-        pass
+        if amount > 0:
+            card.deposit_money(amount)
+        else:
+            return f"Amount must be greater than 0"
 
 #You may use the following code to test your function:
 
@@ -112,6 +115,7 @@ if __name__ == "__main__":
     print("Luxury lunches sold:", exactum.luxuries) 
     '''
     #Part 3
+    '''
     exactum = PaymentTerminal()
 
     change = exactum.eat_ordinary(10)
@@ -129,9 +133,9 @@ if __name__ == "__main__":
     print("Funds available at the terminal:", exactum.funds)
     print("Regular lunches sold:", exactum.ordinaries)
     print("Special lunches sold:", exactum.luxuries) 
-
+    '''
     #Part4
-    """ exactum = PaymentTerminal()
+    exactum = PaymentTerminal()
 
     card = LunchCard(2)
     print(f"Card balance is {card.balance} euros")
@@ -147,5 +151,5 @@ if __name__ == "__main__":
     print(f"Card balance is {card.balance} euros")
 
     print("Funds available at the terminal:", exactum.funds)
-    print("Regular lunches sold:", exactum.lunches)
-    print("Special lunches sold:", exactum.specials) """
+    print("Regular lunches sold:", exactum.ordinaries)
+    print("Special lunches sold:", exactum.luxuries) 
