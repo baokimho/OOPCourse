@@ -11,6 +11,17 @@ class Room:
     
     def add(self, person: Person):
         self.people.append(person)
+    
+    def shortest(self):
+        return min(self.people, key=lambda person: person.height) if self.people else None
+    
+    def remove_shortest(self):
+        if self.people:
+            shortest = self.shortest()
+            self.people.remove(shortest)
+            return shortest
+        else:
+            return None
 
     def is_empty(self):
         return len(self.people) == 0 
@@ -25,12 +36,26 @@ class Room:
 
 
 #Example of Usage
+#part1
+
 room = Room() 
-print("Is the room empty?", room.is_empty())
+#print("Is the room empty?", room.is_empty())
 room.add(Person("Lea", 183)) 
 room.add(Person("Kenya", 172)) 
 room.add(Person("Ally", 166)) 
 room.add(Person("Nina", 162)) 
 room.add(Person("Dorothy", 175)) 
+#print("Is the room empty?", room.is_empty())
+#room.print_contents()
+
+#part2
 print("Is the room empty?", room.is_empty())
+print("Shortest:", room.shortest())
+print()
+#room.print_contents()
+
+#part3
+removed= room.remove_shortest()
+print(f"Removed from room: {removed.name}") 
+print()
 room.print_contents()
