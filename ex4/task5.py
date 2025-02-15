@@ -135,6 +135,7 @@ if __name__ == "__main__":
     print("Special lunches sold:", exactum.luxuries) 
     '''
     #Part4
+    '''
     exactum = PaymentTerminal()
 
     card = LunchCard(2)
@@ -153,3 +154,4 @@ if __name__ == "__main__":
     print("Funds available at the terminal:", exactum.funds)
     print("Regular lunches sold:", exactum.ordinaries)
     print("Special lunches sold:", exactum.luxuries) 
+'''
