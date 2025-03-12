@@ -205,9 +205,9 @@ class World:
             print(" ".join(str(cell) for cell in row))
         print()
 
-# --- TEST CASES ---
+""" TEST CASES """
 if __name__ == "__main__":
-    # Create a world
+    #Create a world
     world = World(5, 5)
 
     # Create players
