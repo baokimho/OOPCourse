@@ -11,3 +11,7 @@ class City:
     def __init__(self, nimi: str, population: int):
         self.__nimi = nimi
         self.__population = population
+
+
+print(City.postcodes)  
+print(City.postcodes["Helsinki"]) 
