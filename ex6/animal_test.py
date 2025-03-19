@@ -53,7 +53,6 @@ def make_it_do_the_sound(any_animal: Animal):
     any_animal.make_sound()
 
 
-# Keeping these test functions for reference but not using them
 def run_c_tests():
     a4 = Wolf("Raasinkorpi", 6)
     a4.make_sound()
@@ -75,14 +74,14 @@ def test_encapsulation():
     try:
         print(a.__age)  # This should fail
     except AttributeError:
-        print("✔ Encapsulation works: Cannot access __age directly.")
+        print("Encapsulation works: Cannot access __age directly.")
 
     # Wolf class
     w = Wolf("Moon Pack", 4)
     try:
         print(w.__pack_name)  # This should fail
     except AttributeError:
-        print("✔ Encapsulation works: Cannot access __pack_name directly.")
+        print("Encapsulation works: Cannot access __pack_name directly.")
 
 
 def test_getters():
@@ -91,11 +90,11 @@ def test_getters():
     a = Animal(4, 5)
     assert a.get_legs() == 4
     assert a.get_age() == 5
-    print("✔ get_legs() and get_age() work correctly.")
+    print("get_legs() and get_age() work correctly.")
 
     w = Wolf("Moon Pack", 4)
     assert w.get_pack_name() == "Moon Pack"
-    print("✔ get_pack_name() works correctly.")
+    print("get_pack_name() works correctly.")
 
 
 def test_setters():
@@ -104,12 +103,12 @@ def test_setters():
     a = Animal(4, 5)
     a.set_age(10)
     assert a.get_age() == 10
-    print("✔ set_age() updates age correctly.")
+    print("set_age() updates age correctly.")
 
     w = Wolf("Moon Pack", 4)
     w.set_pack_name("Shadow Pack")
     assert w.get_pack_name() == "Shadow Pack"
-    print("✔ set_pack_name() updates pack name correctly.")
+    print("set_pack_name() updates pack name correctly.")
 
 
 def run_dog_tests():
@@ -120,19 +119,19 @@ def run_dog_tests():
 
     # Encapsulation test
     try:
-        print(d.__breed)  # ❌ Should fail
+        print(d.__breed)  
     except AttributeError:
-        print("✔ Encapsulation works: Cannot access __breed directly.")
+        print("Encapsulation works: Cannot access __breed directly.")
 
     # Getter test
-    print(f"✔ The dog's breed is: {d.get_breed()}")
+    print(f"The dog's breed is: {d.get_breed()}")
 
     # Setter test
     d.set_breed("Labrador")
-    print(f"✔ The dog's updated breed is: {d.get_breed()}")
+    print(f"The dog's updated breed is: {d.get_breed()}")
 
     # Dynamic binding test → Dog should bark, not howl
-    print("✔ Dog sound test output:")
+    print("Dog sound test output:")
     d.make_sound()  # Expected: *Dog barking* Woof! Woof!
 
     # Fetching test
@@ -162,10 +161,10 @@ def run_dog_tests():
 # print("\nSetter tests:")
 # test_setters()
 
-print("\nDog Tests:")
-run_dog_tests()
+# print("\nDog Tests:")
+# run_dog_tests()
 # Keeping c-tests and d-tests but not running them
-"""
+
 print()
 print("c-tests:")
 run_c_tests()
@@ -173,4 +172,4 @@ run_c_tests()
 print()
 print("d-tests:")
 run_d_tests()
-"""
+

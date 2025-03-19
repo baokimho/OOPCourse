@@ -1,35 +1,23 @@
-# class Animal:
-
-#     def __init__(self, number_of_legs, age):
-#         self.legs = number_of_legs
-#         self.age = age
-
-#     def number_of_legs(self): 
-#         return self.legs
-
-#     def make_sound(self):
-#         print("*it's quiet*")
-    
-#     def get_age(self):
-#         return self.age
-        
-        
 class Animal:
     def __init__(self, number_of_legs, age):
-        self.__legs = number_of_legs  
+        assert isinstance(number_of_legs, int) and number_of_legs > 0, "Number of legs must be a positive integer"
+        assert isinstance(age, int) and age >= 0, "Age must be a non-negative integer"
+
+        self.__legs = number_of_legs 
         self.__age = age  
 
-    def get_legs(self): 
+    def get_legs(self):
         return self.__legs
 
     def get_age(self):
         return self.__age
 
     def set_age(self, new_age):
-        if new_age >= 0:
-            self.__age = new_age
-        else:
-            print("Age cannot be negative!")
+        assert isinstance(new_age, int) and new_age >= 0, "New age must be a non-negative integer"
+        self.__age = new_age
 
     def make_sound(self):
         print("*it's quiet*")
+
+        
+
