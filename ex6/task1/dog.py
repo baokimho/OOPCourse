@@ -10,7 +10,7 @@ class Dog(Wolf):
         self.__breed = breed 
 
     def make_sound(self):
-        print("*Dog barking* Woof! Woof!")
+        print("*Dog barking* Woof! Woof!*")
 
     def fetch(self, item):
         assert isinstance(item, str) and len(item) > 0, "Item must be a non-empty string"
