@@ -24,7 +24,7 @@ def run_b_tests():
     make_it_do_the_sound(a4)
     make_it_do_the_sound(wolf1)
 
-    wolf1.another_make_sound()
+    wolf1.make_sound()
     print(a3.get_legs())
 
 
@@ -143,26 +143,26 @@ def run_dog_tests():
 
 
 # Running the active tests
-# print("a-tests:")
-# run_a_tests()
+print("a-tests:")
+run_a_tests()
 
-# print("\nb-tests:")
-# run_b_tests()
+print("\nb-tests:")
+run_b_tests()
 
-# print("\nAge tests:")
-# run_age_tests()
+print("\nAge tests:")
+run_age_tests()
 
-# print("\nEncapsulation tests:")
-# test_encapsulation()
+print("\nEncapsulation tests:")
+test_encapsulation()
 
-# print("\nGetter tests:")
-# test_getters()
+print("\nGetter tests:")
+test_getters()
 
-# print("\nSetter tests:")
-# test_setters()
+print("\nSetter tests:")
+test_setters()
 
-# print("\nDog Tests:")
-# run_dog_tests()
+print("\nDog Tests:")
+run_dog_tests()
 # Keeping c-tests and d-tests but not running them
 
 print()
